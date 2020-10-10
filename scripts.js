@@ -78,7 +78,8 @@ $(document).ready(function() {
                 dataType: "text",
                 success: function(data) {
                         var quoteArray = CSVToArray(data, ',');
-                        console.log(Math.floor(Math.random() * quoteArray.length));
+                        var rnd = Math.floor(Math.random() * quoteArray.length);
+                        console.log(quoteArray[rnd]);
                 }
         });
 });
