@@ -63,10 +63,10 @@ function CSVToArray( strData, strDelimiter ){
                         // We found a non-quoted value.
                         strMatchedValue = arrMatches[ 3 ];
                 }
-                        // Now that we have our value string, let's add
-                        // it to the data array.
-                        arrData[ arrData.length - 1 ].push( strMatchedValue );
-                }
+                // Now that we have our value string, let's add
+                // it to the data array.
+                arrData[ arrData.length - 1 ].push( strMatchedValue );
+        }
         // Return the parsed data.
         return( arrData );
 }
@@ -79,6 +79,17 @@ $(document).ready(function() {
                 success: function(data) {
                         var quoteArray = CSVToArray(data, ',');
                         console.log(Math.floor(Math.random() * quoteArray.length));
-                };
+                }
         });
+});
+
+
+$(document).ready(function() {
+        $.ajax({
+                type: "GET",
+                url: "files/testfile.csv",
+                dataType: "text",
+                success: function(data) {
+                processData(data);
+        };
 });
