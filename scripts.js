@@ -79,7 +79,9 @@ $(document).ready(function() {
                 success: function(data) {
                         var quoteArray = CSVToArray(data, ',');
                         var rnd = Math.floor(Math.random() * quoteArray.length);
-                        console.log(quoteArray[rnd]);
+                        var chosenQuote = quoteArray[rnd]
+                        $("#quote").text(chosenQuote);
+                        console.log(chosenQuote);
                 }
         });
 });
