@@ -78,7 +78,7 @@ $(document).ready(function() {
                 dataType: "text",
                 success: function(data) {
                         var quoteArray = CSVToArray(data, ',');
-                        var rnd = Math.floor(Math.random() * quoteArray.length);
+                        var rnd = Math.floor(Math.random() * quoteArray.length-1);
                         var chosenQuote = quoteArray[rnd]
                         $("#quote_chapter").text(chosenQuote[2]);
                         $("#quote_proper").text(chosenQuote[0]);
