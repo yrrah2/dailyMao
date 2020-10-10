@@ -3,13 +3,29 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
+    function processCSV(csv_file){
+    
+      var lines = csv_file.split("\n");
+      var titles = lines[0].split(" ");
+      var data = new Array(lines.length - 1);
+
+       for (var i = 1; i < lines.length; i++) {
+        data[i - 1] = {};
+        lines[i] = lines[i].split(" ");
+        for (var j = 0; j < titles.length; j++) {
+          data[i - 1][titles[j]] = lines[i][j];
+        };
+       };
+      console.log(data)
+    };
+    
     $(document).ready(function() {
       $.ajax({
         type: "GET",
         url: "https://yrrah2.github.io/dailyMao/quotations.csv",
         dataType: "text",
         success: function(data) {
-          console.log(data);
+          processCSV(data);
         }
       });
     });
