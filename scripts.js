@@ -79,17 +79,6 @@ $(document).ready(function() {
                 success: function(data) {
                         var quoteArray = CSVToArray(data, ',');
                         console.log(Math.floor(Math.random() * quoteArray.length));
-                }
+                };
         });
-});
-
-
-$(document).ready(function() {
-        $.ajax({
-                type: "GET",
-                url: "files/testfile.csv",
-                dataType: "text",
-                success: function(data) {
-                processData(data);
-        };
-});
+};
