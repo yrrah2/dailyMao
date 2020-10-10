@@ -79,6 +79,6 @@ $(document).ready(function() {
                 success: function(data) {
                         var quoteArray = CSVToArray(data, ',');
                         console.log(Math.floor(Math.random() * quoteArray.length));
-                };
+                }
         });
 };
