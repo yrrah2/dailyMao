@@ -12,10 +12,14 @@
   left: 0;
   right: 0;
   text-align: center;
+}
+
+#quote_proper {
   padding-top: 16px;
 }
 
 #quote_source {
   color: #555555;
   padding-top: 16px;
+  text-align: right;
 }
