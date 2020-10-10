@@ -6,15 +6,10 @@
     function processCSV(csv_file){
     
       var lines = csv_file.split("\n");
-      var titles = lines[0].split(",");
-      var data = new Array(lines.length - 1);
+      var data = new Array(lines.length);
 
-       for (var i = 1; i < lines.length; i++) {
-        data[i - 1] = {};
-        lines[i] = lines[i].split(",");
-        for (var j = 0; j < titles.length; j++) {
-          data[i - 1][titles[j]] = lines[i][j];
-        };
+       for (var i = 0; i < lines.length; i++) {
+        data[i] = lines[i].split(",");
        };
       console.log(data)
     };
