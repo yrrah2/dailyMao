@@ -81,4 +81,4 @@ $(document).ready(function() {
                         console.log(Math.floor(Math.random() * quoteArray.length));
                 }
         });
-};
+});
