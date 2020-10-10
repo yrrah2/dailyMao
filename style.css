@@ -12,10 +12,11 @@
   left: 0;
   right: 0;
   text-align: center;
-  height: 30px;
+  height: 32px;
+  overflow:auto;
 }
 
 #quote_source {
   color: #555555;
-  height: 30px;
+  padding-top: 16px;
 }
