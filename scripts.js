@@ -80,7 +80,9 @@ $(document).ready(function() {
                         var quoteArray = CSVToArray(data, ',');
                         var rnd = Math.floor(Math.random() * quoteArray.length);
                         var chosenQuote = quoteArray[rnd]
-                        $("#quote").text(chosenQuote);
+                        $("#quote_chapter").text(chosenQuote[2]);
+                        $("#quote_proper").text(chosenQuote[0]);
+                        $("#quote_source").text(chosenQuote[1]);
                         console.log(chosenQuote);
                 }
         });
