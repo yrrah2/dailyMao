@@ -1,6 +1,19 @@
 <html>
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+  $.ajax({
+    type: "GET",
+    url: "files/testfile.csv",
+    dataType: "text"
+    success: function(data) {
+      console.log(data);
+    }
+  });
+});
+  </script>
 </head>
 
 <body>
