@@ -20,6 +20,10 @@ body {
 	padding: 16px
 }
 
+#quote_reference {
+	color: #9d0000;
+}
+
 #quote_proper {
 	white-space: pre-wrap;
 	display: inline;
