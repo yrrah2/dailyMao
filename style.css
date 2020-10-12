@@ -42,11 +42,14 @@ body {
 	right: 0;
 }
 
+.right {
+	float: right;
+}
+
 #menu {
 	color: #069;
 	background-color: #b63c2d;
 	padding: 0.7ex;
-	text-align: right;
 }
 
 #menu a, #menu b {
@@ -55,7 +58,8 @@ body {
 }
 
 #menu a:hover {
-	background-color: #069;
+	background-color: #bf665b;
+	cursor: pointer;
 }
 
 #menu a {
