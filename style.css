@@ -24,16 +24,11 @@
   text-align: right;
 }
 
-.right {
-	float: right;
-	margin: 0;
-	padding: 0;
-}
-
 #menu {
 	color: #069;
 	background-color: #b63c2d;
 	padding: 0.7ex;
+	text-align: right;
 }
 
 #menu a, #menu b {
