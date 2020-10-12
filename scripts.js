@@ -38,14 +38,6 @@ const CSVToArray = ( strData, strDelimiter ) => {
 }
 
 const generateQuote = (minQuoteVal, maxQuoteVal) => {
-        $.ajax({                                                                        // GET request for CSV file
-                type: "GET",
-                url: "https://yrrah2.github.io/dailyMao/quotations.csv",
-                dataType: "text",
-                success: (data) => {
-                        var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
-                        console.log(quoteArray);
-                        
                         var range = maxQuoteVal - minQuoteVal + 1;                      // Find number of values between selected range
                         var rnd =  Math.floor(Math.random() * range) + minQuoteVal;     // Choose random quote in range
                         var chosenQuote = quoteArray[rnd];                              // Save randomly chosen quote
