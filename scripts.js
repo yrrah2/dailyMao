@@ -35,7 +35,7 @@ const CSVToArray = ( strData, strDelimiter ) => {
         return( arrData );
 }
 
-$(document).ready(() => {
+const generateQuote = () => {
         $.ajax({                                                                        // GET request for CSV file
                 type: "GET",
                 url: "https://yrrah2.github.io/dailyMao/quotations.csv",
@@ -52,3 +52,5 @@ $(document).ready(() => {
                 }
         });
 });
+
+$(document).ready( generateQuote() );
