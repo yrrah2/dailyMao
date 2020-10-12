@@ -21,7 +21,7 @@ body {
 }
 
 #quote_proper {
-	white-space: pre-line;
+	white-space: pre-wrap;
 	display: inline;
 }
 
