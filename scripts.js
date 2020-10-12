@@ -42,6 +42,7 @@ const generateQuote = (minQuoteVal, maxQuoteVal) => {
                 dataType: "text",
                 success: (data) => {
                         var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
+                        console.log(quoteArray);
                         
                         var range = maxQuoteVal - minQuoteVal + 1;                      // Find number of values between selected range
                         var rnd =  Math.floor(Math.random() * range) + minQuoteVal;     // Choose random quote in range
@@ -55,4 +56,7 @@ const generateQuote = (minQuoteVal, maxQuoteVal) => {
         });
 };
 
-$(document).ready( generateQuote(0, 426) );
+$(document).ready( 
+        generateQuote(0, 426);
+        console.log(quoteArray)
+);
