@@ -17,15 +17,17 @@ body {
 	left: 0;
 	right: 0;
 	text-align: center;
+	padding: 16px
 }
 
 #quote_proper {
 	white-space: pre-line;
+	display: inline;
 }
 
 #quote_source {
 	color: #555555;
-	padding-top: 16px;
+	padding: 16px;
 	text-align: right;
 }
 
