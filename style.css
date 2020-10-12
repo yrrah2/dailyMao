@@ -19,6 +19,10 @@ body {
 	text-align: center;
 }
 
+#quote_proper {
+	white-space: pre-line;
+}
+
 #quote_source {
 	color: #555555;
 	padding-top: 16px;
