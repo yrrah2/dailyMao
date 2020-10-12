@@ -1,7 +1,11 @@
+var quoteVal = -1;
+
 const generateQuote = (minQuoteVal, maxQuoteVal) => {
         var quoteRange = quoteArray.slice(minQuoteVal, maxQuoteVal);    // Select range
         var rnd = Math.floor(Math.random() * quoteRange.length);        // Choose random quote from range
-        const chosenQuote = quoteRange[rnd];                            // Declare chosen quote
+        while (rnd == quoteVal){rnd = Math.floor(Math.random() * quoteRange.length)}; // Make sure the choice isn't the current quote
+        quoteVal = rnd;
+        var chosenQuote = quoteRange[rnd];                            // Declare chosen quote
 
         $("#quote_chapter").text(chosenQuote[2]);                       // Display the chapter the quote appears in
         $("#quote_reference").text(chosenQuote[3]+':'+chosenQuote[4]);  // Display the quote reference
