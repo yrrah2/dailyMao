@@ -38,7 +38,7 @@ const CSVToArray = ( strData, strDelimiter ) => {
 $(document).ready(() => {
         $.ajax({                                                                        // GET request for CSV file
                 type: "GET",
-                url: "https://yrrah2.github.io/dailyMao/quotationsBiblical.csv",
+                url: "https://yrrah2.github.io/dailyMao/quotations.csv",
                 dataType: "text",
                 success: (data) => {
                         var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
