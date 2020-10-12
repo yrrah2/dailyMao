@@ -35,14 +35,16 @@ const CSVToArray = ( strData, strDelimiter ) => {
         return( arrData );
 }
 
-const generateQuote = () => {
+const generateQuote = (minQuoteVal, maxQuoteVal) => {
         $.ajax({                                                                        // GET request for CSV file
                 type: "GET",
                 url: "https://yrrah2.github.io/dailyMao/quotations.csv",
                 dataType: "text",
                 success: (data) => {
                         var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
-                        var rnd = Math.floor(Math.random() * quoteArray.length-1);      // Choose random quote
+                        
+                        var range = maxQuoteVal - minQuoteVal                           // Find number of values between selected range
+                        var rnd = minQuoteVal + Math.floor(Math.random() * range);    // Choose random quote in range
                         var chosenQuote = quoteArray[rnd]                               // Save randomly chosen quote
 
                         $("#quote_chapter").text(chosenQuote[2]);                       // Display the chapter the quote appears in
@@ -53,4 +55,4 @@ const generateQuote = () => {
         });
 };
 
-$(document).ready( generateQuote() );
+$(document).ready( generateQuote(0, 426) );
