@@ -28,6 +28,13 @@ body {
 	text-align: right;
 }
 
+#emblem {
+	width: 500px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 #menu {
 	color: #069;
 	background-color: #b63c2d;
