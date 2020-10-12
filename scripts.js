@@ -1,3 +1,5 @@
+console.log(quoteArray);
+
 // ref: http://stackoverflow.com/a/1293163/2343
 // This function reads the CSV quote file and
 // converts it to a useable array
