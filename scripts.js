@@ -38,13 +38,13 @@ const CSVToArray = ( strData, strDelimiter ) => {
 $(document).ready(() => {
         $.ajax({                                                                        // GET request for CSV file
                 type: "GET",
-                url: "https://yrrah2.github.io/dailyMao/quotations.csv",
+                url: "https://yrrah2.github.io/dailyMao/quotationsBiblical.csv",
                 dataType: "text",
                 success: (data) => {
                         var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
                         var rnd = Math.floor(Math.random() * quoteArray.length-1);      // Choose random quote
                         var chosenQuote = quoteArray[rnd]                               // Save randomly chosen quote
-                        $("#quote_chapter").text(chosenQuote[2]);                       // Display the chapter the quote appears in
+                        $("#quote_chapter").text(chosenQuote[3] + '. ' + chosenQuote[2]);                       // Display the chapter the quote appears in
                         $("#quote_proper").text(chosenQuote[0]);                        // Display the quote itself
                         $("#quote_source").text(chosenQuote[1]);                        // Display the source of the quote as listed in QfMZ
                 }
