@@ -55,21 +55,19 @@ body {
 #menu {
 	color: #069;
 	background-color: #b63c2d;
-	padding: 0.7ex;
+	overflow: hidden;
 }
 
-#menu a, #menu b {
-	padding: 0.5ex 1ex;
+#menu a {
+	padding: 0.7ex 1ex;
 	color: #fff;
+	text-decoration: none;
+	float: left;
 }
 
 #menu a:hover {
 	background-color: #bf665b;
 	cursor: pointer;
-}
-
-#menu a {
-	text-decoration: none;
 }
 
 
