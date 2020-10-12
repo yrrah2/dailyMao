@@ -35,3 +35,16 @@
 	background-color: #b63c2d;
 	padding: 0.7ex;
 }
+
+#menu a, #menu b {
+	padding: 0.5ex 1ex;
+	color: #fff;
+}
+
+#menu a:hover {
+	background-color: #069;
+}
+
+#menu a {
+	text-decoration: none;
+}
