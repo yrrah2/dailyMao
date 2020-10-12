@@ -56,7 +56,4 @@ const generateQuote = (minQuoteVal, maxQuoteVal) => {
         });
 };
 
-$(document).ready( 
-        generateQuote(0, 426);
-        console.log(quoteArray)
-);
+$(document).ready(generateQuote(0, 426));
