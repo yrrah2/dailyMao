@@ -48,4 +48,8 @@ const generateQuote = (minQuoteVal, maxQuoteVal) => {
                         $("#quote_source").text(chosenQuote[1]);                        // Display the source of the quote as listed in QfMZ
 };
 
-$(document).ready(generateQuote(0, 426));
+pageload = () => { 
+        generateQuote(0, 426)
+}
+
+window.onload = pageload;
