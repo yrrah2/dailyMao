@@ -33,6 +33,12 @@ body {
 	color: #555555;
 	padding: 16px;
 	text-align: right;
+	font-size: 9pt;
+	font-family: "Times", monospace;
+	line-height: 85%;
+	text-indent: 0em;
+	margin-left: 20%;
+	margin-right: 8%;
 }
 
 #emblem {
@@ -64,4 +70,17 @@ body {
 
 #menu a {
 	text-decoration: none;
+}
+
+
+#menu ul {
+	display: inline-block;
+	width: auto;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	display: inline-block;
 }
