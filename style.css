@@ -115,6 +115,9 @@ body {
 	text-align: left;
 	background-color: #b63c2d;
 	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap; 
+	max-width: 300px;
 }
 
 .dropdown-content a:hover {
