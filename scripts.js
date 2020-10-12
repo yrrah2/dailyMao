@@ -51,6 +51,6 @@ const generateQuote = () => {
                         $("#quote_source").text(chosenQuote[1]);                        // Display the source of the quote as listed in QfMZ
                 }
         });
-});
+};
 
 $(document).ready( generateQuote() );
