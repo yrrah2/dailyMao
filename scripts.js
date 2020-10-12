@@ -7,7 +7,7 @@ const CSVToArray = ( strData, strDelimiter ) => {
         strDelimiter = (strDelimiter || ",");
         var objPattern = new RegExp(
                 (
-                        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)"
+                        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
                         "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
                         "([^\"\\" + strDelimiter + "\\r\\n]*))"
                 ),
