@@ -36,18 +36,17 @@ function CSVToArray( strData, strDelimiter ){
 }
 
 $(document).ready(function() {
-        $.ajax({
+        $.ajax({                                                                        // GET request for CSV file
                 type: "GET",
                 url: "https://yrrah2.github.io/dailyMao/quotations.csv",
                 dataType: "text",
                 success: function(data) {
-                        var quoteArray = CSVToArray(data, ',');
-                        var rnd = Math.floor(Math.random() * quoteArray.length-1);
-                        var chosenQuote = quoteArray[rnd]
-                        $("#quote_chapter").text(chosenQuote[2]);
-                        $("#quote_proper").text(chosenQuote[0]);
-                        $("#quote_source").text(chosenQuote[1]);
-                        console.log(chosenQuote);
+                        var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
+                        var rnd = Math.floor(Math.random() * quoteArray.length-1);      // Choose random quote
+                        var chosenQuote = quoteArray[rnd]                               // Save randomly chosen quote
+                        $("#quote_chapter").text(chosenQuote[2]);                       // Display the chapter the quote appears in
+                        $("#quote_proper").text(chosenQuote[0]);                        // Display the quote itself
+                        $("#quote_source").text(chosenQuote[1]);                        // Display the source of the quote as listed in QfMZ
                 }
         });
 });
