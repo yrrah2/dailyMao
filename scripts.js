@@ -1,7 +1,7 @@
 // ref: http://stackoverflow.com/a/1293163/2343
 // This function reads the CSV quote file and
 // converts it to a useable array
-function CSVToArray( strData, strDelimiter ){
+const CSVToArray = ( strData, strDelimiter ) => {
         strDelimiter = (strDelimiter || ",");
         var objPattern = new RegExp(
                 (
@@ -35,12 +35,12 @@ function CSVToArray( strData, strDelimiter ){
         return( arrData );
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
         $.ajax({                                                                        // GET request for CSV file
                 type: "GET",
                 url: "https://yrrah2.github.io/dailyMao/quotations.csv",
                 dataType: "text",
-                success: function(data) {
+                success: (data) => {
                         var quoteArray = CSVToArray(data, ',');                         // Convert quote CSV to Array
                         var rnd = Math.floor(Math.random() * quoteArray.length-1);      // Choose random quote
                         var chosenQuote = quoteArray[rnd]                               // Save randomly chosen quote
