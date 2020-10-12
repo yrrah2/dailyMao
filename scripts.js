@@ -7,7 +7,7 @@ const CSVToArray = ( strData, strDelimiter ) => {
         strDelimiter = (strDelimiter || ",");
         var objPattern = new RegExp(
                 (
-                        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+                        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" https://yrrah2.github.io/dailyMao/+
                         "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
                         "([^\"\\" + strDelimiter + "\\r\\n]*))"
                 ),
@@ -46,8 +46,6 @@ const generateQuote = (minQuoteVal, maxQuoteVal) => {
                         $("#quote_reference").text(chosenQuote[3]+':'+chosenQuote[4]);  // Display the quote reference
                         $("#quote_proper").text(chosenQuote[0]);                        // Display the quote itself
                         $("#quote_source").text(chosenQuote[1]);                        // Display the source of the quote as listed in QfMZ
-                }
-        });
 };
 
 $(document).ready(generateQuote(0, 426));
